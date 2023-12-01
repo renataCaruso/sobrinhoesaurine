@@ -18,6 +18,7 @@ body {
     min-height: 100vh;
     background: #313131;
 }
+
 .container {
     position: relative;
     display: flex;
@@ -26,6 +27,7 @@ body {
     width: 1200px;
     flex-wrap: wrap;
 }
+
 .container .card {
     position: relative;
     width: 340px;
@@ -33,33 +35,42 @@ body {
     margin: 20px;
     background: #3f3f3f;
 }
+
 .container .card::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     border: 20px solid transparent;
-    border-top: 20px solid #e4972a; /* #995A1C */
-    border-right: 20px solid #e4972a;;
+    border-top: 20px solid #e4972a;
+    /* #995A1C */
+    border-right: 20px solid #e4972a;
+    ;
 }
+
 .container .card.active::before {
     border-top: 20px solid #995A1C;
     border-right: 20px solid #995A1C;
 }
+
 .container .card .icon {
     margin-bottom: 10px;
 }
+
 .container .card .icon img {
     max-width: 90px;
 }
+
 .container .card .content {
     position: relative;
     height: 215px;
     overflow: hidden;
 }
+
 .container .card.active .content {
     height: auto;
 }
+
 .container .card .content::before {
     /* content: ''; */
     position: absolute;
@@ -69,20 +80,24 @@ body {
     height: 100px;
     background: linear-gradient(transparent, #3f3f3f);
 }
+
 .content .card.active .content::before {
     display: none;
 }
+
 .container .card .content h3 {
     color: #fff;
     font-size: 1.4em;
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 .container .card .content p {
     font-weight: 300;
     color: #ccc;
     font-size: 0.74em;
 }
+
 .container .card .more {
     position: relative;
     padding: 10px 15px;
@@ -96,51 +111,70 @@ body {
     letter-spacing: 2px;
     font-size: 14px;
 }
+
 .container .card.active .more {
     background: #995A1C;
     color: #fff;
 }
+
 .container .card .more::before {
     content: 'Ver exemplos';
 }
+
 .container .card.active .more::before {
     content: 'Ver Menos';
 }
 
-section{
+section {
     height: calc(80vh - 50vh);
     padding-top: 6%;
-  }
+}
 
- 
-  
-  section h1 {
+
+
+section h1 {
     display: flex;
     justify-content: center;
     color: #e4972a;
     text-align: center;
     /* padding-top: 5%; */
-  }
-  @media only screen and (max-width: 576px) {
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+@media only screen and (max-width: 576px) {
     section h1 {
         text-align: center;
         padding-top: 50px;
-        
-    }
-    .logo img {
-        width: 80%;
-       padding-left: 77px;
-       padding-top: 20px;
-       padding-bottom: 30px;
-    }
-  }
-  @media only screen and (min-width: 1201px) {
-  
- .logo img {
-    width: 800px;
-    padding-left: 450px;
-    padding-top: 40px;
-    padding-bottom: 60px;
 
-  }
+    }
+
+    /* celular */
+    .logo img {
+        width: 70%;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /* desktop */
+    .logo img {
+        width: 400px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
 }
